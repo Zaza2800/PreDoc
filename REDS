@@ -1,1 +1,2 @@
-This course is compose by ...
+This course is compose by 2 projects : 
+  * Static Hand Gesture (French report) 
