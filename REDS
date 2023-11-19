@@ -1,2 +1,3 @@
 This course is compose by 2 projects : 
-* Static Hand Gesture (French report) 
+- Static Hand Gesture (French report) 
+-
