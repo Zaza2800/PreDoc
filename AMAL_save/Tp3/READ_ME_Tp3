@@ -1,0 +1,7 @@
+Dans ce Tp, 
+
+On apprend à grer les données grâce aux classes Dataset et Dataloader. 
+Cette méthode permet des avantages au niveaux de la gestions de la mémoires et permet alors de manipuler la batch_size de nos echantillons si besoin on peut leurs appliquer une fonction collate_fn. 
+Il est aussi expliquer comment passer un calcul sur son GPU. N'eyant pas de GPU je n'ai pas pu faire cette partie. 
+On y explique aussi comment creer des checkpoint pour creer des sauvegarde au fur et à mesure de l'apprentissage de notre modèle. 
+On finalisera alors ce Tp, sur la création d'un autoencodeur. 
