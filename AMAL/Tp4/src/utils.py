@@ -19,24 +19,12 @@ class RNN(nn.Module):
 
 
     def one_step(self, x, h):
-        ''' x : un batch des sequences de taille batch*dim
-        h: batch des états cachés de taille batch*latent
-        sortie de taille batch*latent
-        '''
         f = self.f_x(x) + self.f_h(h)
         h_new = torch.tanh(f)
         return torch.tensor(h_new, requires_grad=True)
     
 
-    def forward(self, x, h):
-        ''' 
-        x : taille length*batch*input_dim
-        h: taille batch*hidden_size
-        sortie= : taille length*batch*hidden_size
-        '''
-        # /!\ dans exo2 : x de taille batch_size*length*input_dim
-        # donc x = torch.permtute(x, (2, 0, 1))
-        
+    def forward(self, x, h):        
         length, batch_size, input_dim = x.size()
         _, hidden_size = h.size()  
 
@@ -49,13 +37,6 @@ class RNN(nn.Module):
         return output
     
     def decode(self, h):
-        '''
-        h: taille batch*latent
-        sortie de taille batch*output
-        '''
-        # return torch.nn.functional.softmax(self.f_d(h), dim=1)
-        # print('h', h.size())
-        # print('self.f_d(h)', self.f_d(h).size())
         return self.f_d(h)
 
 
